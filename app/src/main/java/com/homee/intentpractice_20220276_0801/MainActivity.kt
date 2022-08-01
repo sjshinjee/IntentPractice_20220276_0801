@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
       moveBtn.setOnClickListener {
           val myIntent = Intent(this,SecondActivity::class.java)
-          val myName = "IP_220726"
+          val myName = dataEdt.text.toString()
           myIntent.putExtra("myName", myName)
           startActivity(myIntent)
       }
