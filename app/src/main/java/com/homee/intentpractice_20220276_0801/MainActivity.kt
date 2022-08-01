@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
       moveBtn.setOnClickListener {
           val myIntent = Intent(this,SecondActivity::class.java)
+          val myName = "IP_220726"
+          myIntent.putExtra("myName", myName)
           startActivity(myIntent)
       }
 
