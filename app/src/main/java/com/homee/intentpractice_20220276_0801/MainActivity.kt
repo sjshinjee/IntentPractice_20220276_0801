@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
           val myName = dataEdt.text.toString()
           myIntent.putExtra("myName", myName)
          //     .putExtra("데이터2", "데이터2")
-              .putExtra("데이터3", "데이터3")
+          //    .putExtra("데이터3", "데이터3")
           startActivity(myIntent)
       }
 
