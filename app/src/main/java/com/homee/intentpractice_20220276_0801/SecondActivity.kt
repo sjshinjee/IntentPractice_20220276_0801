@@ -12,6 +12,7 @@ class SecondActivity : AppCompatActivity() {
 
         // MainActivity에서 보내준 데이터(수화물)을 찾는 코드
         val myName = intent.getStringExtra("myName")
+   //     val data2 = intent.getStringExtra("데이터2")
         dataTxt.text = myName
 
 
