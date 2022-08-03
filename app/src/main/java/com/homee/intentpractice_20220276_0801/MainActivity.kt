@@ -10,14 +10,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-      moveBtn.setOnClickListener {
-          val myIntent = Intent(this,SecondActivity::class.java)
-          val myName = dataEdt.text.toString()
-          myIntent.putExtra("myName", myName)
-         //     .putExtra("데이터2", "데이터2")
-          //    .putExtra("데이터3", "데이터3")
-          startActivity(myIntent)
-      }
+//      moveBtn.setOnClickListener {
+//          val myIntent = Intent(this,SecondActivity::class.java)
+//          val myName = dataEdt.text.toString()
+//          myIntent.putExtra("myName", myName)
+//         //     .putExtra("데이터2", "데이터2")
+//          //    .putExtra("데이터3", "데이터3")
+//          startActivity(myIntent)
+//      }
+
+        editBtn.setOnClickListener {
+            val myIntent = Intent(this, EditActivity::class.java)
+            startActivityForResult(myIntent,1000)
+
+        }
+
 
         }
     }
