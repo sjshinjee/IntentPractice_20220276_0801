@@ -1,6 +1,7 @@
 package com.homee.intentpractice_20220276_0801
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,7 +25,15 @@ class MainActivity : AppCompatActivity() {
                     startActivityForResult(myIntent,100)  //1000은 requestCode 출발 목적코드다 coz 수정화면이 실제로는 많으므로
                                                            // 실무에서는 위에 val REQ_FOR_EDIT처럼 변수를 주고 1000대신에 그 변수명을 써준다
                                 }
+
+                // Intent(4) 전화하기 버튼 클릭event
+                callBtn.setOnClickListener {
+                            val myUri = Uri.parse("tel:${PhoneNumTxt.text}")  //Uri클래스에 parse기능을 사용하는데 여기 지켜야 할 rule이 있다
+                            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+                            startActivity(myIntent)
+                                }
              }
+
 
 
     //수정한 데이터 확인 후  UI반영
