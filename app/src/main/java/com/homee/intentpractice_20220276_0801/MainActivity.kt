@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
                 editBtn.setOnClickListener {
                     val myIntent = Intent(this, EditActivity::class.java)
-                    startActivityForResult(myIntent,1000)  //1000은 requestCode 출발 목적코드다
+                    startActivityForResult(myIntent,1000)  //1000은 requestCode 출발 목적코드다 coz 수정화면이 실제로는 많으므로
                                 }
              }
 
