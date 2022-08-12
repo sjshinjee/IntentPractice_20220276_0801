@@ -20,5 +20,6 @@ class EditActivity : AppCompatActivity() {
             setResult(RESULT_OK, resultIntent)
             finish()
         }
+
     }
 }
